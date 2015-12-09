@@ -1,0 +1,16 @@
+A continuacion hay una lista de notas que pueden ser útiles para entender mejor como funciona CHi, extender/arreglar código o
+solucionar algún problema de uso (troubleshoot).
+
+Detalles de implementación:
+* Se se desea cambiar el puerto del servidor, abra el archivo start-server-Windows.bat y cambie la variable 'path' por otro numero. Por defecto, se usa el puerto 8080 y la aplicacion se accede por 'localhost:8080'
+* Al crear un proyecto, subiendo una carpeta, el proyecto es guardado con el nombre de esa carpeta.
+* Al exportar un proyecto, se descarga un archivo de extension .chi con el nombre del proyecto.
+* Al abrir un proyecto ya existente, se debe subir 1 archivo .chi que haya sido previamente, en algun momento, exportado desde la aplicación. El nombre del archivo .chi determinará el nombre del proyecto (e.g. miProyecto1.chi corresponde al proyecto llamado miProyecto1).
+* Evite trabajar simultaneamente en dos proyectos del mismo nombre sobre el mismo navegador, pues habrán inconsistencias y errores en las modificaciones realizadas en la aplicación.
+* Si cerró la página o la recargó por accidente, puede recuperar sus modificaciones si antes ha exportado su proyecto al menos una vez. Presione el boton 'Open project', subiendo su proyecto. (Nota: no modifique el nombre del archivo de proyecto)
+* La aplicación no permite subir una carpeta con el mismo nombre de algun proyecto pasado.
+* Para la aplicación, los archivos con caracteres _ y <espacio> son tratados como identicos. Por ejemplo, "mi proyecto" es igual a "mi_proyecto"
+* Nunca suba un archivo de proyecto (botón de 'Open projecto') si a este le cambió su nombre original en algún momento.
+* Los proyectos exportados de extension .chi , en realidad tienen la misma estructura que los archivos .csv
+* Al exportar un archivo de Weka (.arff), todos los comentarios destacados con algun color serán convertidos a color amarillo en el archivo de Weka (clase directive). Los comentarios sin ser destacados mantendrán su color en el archivo Weka (clase non-directive). Esto es asi, porque aun no ha sido implementado la funcionalidad de exportar a Weka manteniendo los otros colores/clases.
+* Si se desea borrar las modificaciones locales de todos los proyectos que han sido abiertos en la aplicación, puede ejecutar localStorage.clear() en la consola javascript de la página.
